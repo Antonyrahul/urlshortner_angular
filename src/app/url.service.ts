@@ -11,13 +11,13 @@ export class UrlService {
   getshorturl(data):Observable<any>
   {
     console.log(data)
-    return this.http.post('http://localhost:4123/generateurl',{data})
+    return this.http.post('https://urlshortnerappantony.herokuapp.com/generateurl',{data})
     
   }
   getlongurl(data):Observable<any>
   {
     console.log(data)
-    return this.http.post('http://localhost:4123/getlongurl',{data})
+    return this.http.post('https://urlshortnerappantony.herokuapp.com/getlongurl',{data})
     
   }
 }
