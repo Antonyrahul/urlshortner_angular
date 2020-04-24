@@ -37,7 +37,7 @@ this.displayurls();
      this.prod = data.data
  })
   }
-  async processdata(data)
+   processdata(data)
   {
     this.email= localStorage.getItem('email')
     
@@ -51,10 +51,11 @@ this.displayurls();
      longurl:data
 
    }
-   await this.urlservice.getshorturl(this.userdata).subscribe((dataa)=>{
+    this.urlservice.getshorturl(this.userdata).subscribe((dataa)=>{
       console.log(dataa.url)
-      this.shorturl = dataa.url
+      this.shorturl = dataa.
+      this.displayurls();
   })
-  this.displayurls();
+  
   }
 }
