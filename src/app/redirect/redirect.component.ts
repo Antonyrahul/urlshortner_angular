@@ -13,8 +13,9 @@ export class RedirectComponent implements OnInit {
   constructor(private activatedroute:ActivatedRoute,private urlservice:UrlService) { 
     this.id = this.activatedroute.snapshot.params.id
     this.urlservice.getlongurl(this.id).subscribe((data)=>{
-      console.log(data.data.longurl)
-      window.open(data.data.longurl,"_self")
+      console.log(data.data.value.longurl)
+
+      window.open(data.data.value.longurl,"_self")
       
   });
 }

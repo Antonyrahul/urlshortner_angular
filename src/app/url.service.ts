@@ -11,7 +11,7 @@ export class UrlService {
   getshorturl(data):Observable<any>
   {
     console.log(data)
-    return this.http.post('https://urlshortnerappantony.herokuapp.com/generateurl',{data})
+    return this.http.post('https://urlshortnerappantony.herokuapp.com/generateurl',data)
     
   }
   getlongurl(data):Observable<any>
@@ -20,4 +20,21 @@ export class UrlService {
     return this.http.post('https://urlshortnerappantony.herokuapp.com/getlongurl',{data})
     
   }
+
+  loginUser(data):Observable<any>{
+    console.log(data)
+    return this.http.post("https://urlshortnerappantony.herokuapp.com/loginuser",data)
+  }
+
+  registerUser(data):Observable<any>{
+    console.log(data)
+    return this.http.post("https://urlshortnerappantony.herokuapp.com/registeruser",data)
+  }
+
+  getUrls(data):Observable<any>
+  {
+    console.log(data)
+    return this.http.post("https://urlshortnerappantony.herokuapp.com/getUrls",{email:data})
+  }
 }
+//https://urlshortnerappantony.herokuapp.com

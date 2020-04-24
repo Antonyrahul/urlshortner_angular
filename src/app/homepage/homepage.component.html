@@ -1,6 +1,6 @@
 <div class="card text-center">
     <div class="card-header">
-      Featured
+      {{this.name}}
     </div>
     <div class="card-body">
       <h5 class="card-title">Enter the long url below</h5>
@@ -8,11 +8,34 @@
       <input type="text" #longurl class = "form-control" placeholder="Enter url">
       </div>
       <div class = "btn">
-        <button  class="btn btn-primary" (click) = "processdata(longurl.value);">Get url</button>
+        <button [disabled]="!this.name" class="btn btn-primary" (click) = "processdata(longurl.value);">Get url</button>
     </div>
+    <h6 *ngIf = "!this.name" class="card-title">You should login to access this service </h6>
     <h5 class="card-title">antonyrahul.site/{{this.shorturl}}</h5>
     </div>
     <div class="card-footer text-muted">
       2 days ago
+    </div>
+  </div>
+ 
+  <div  class="row display">
+
+    <div *ngFor="let details of prod; let index=index;" class="col-lg-4 col-md-6 mb-4">
+      <div class="card h-100">
+       
+        <div class="card-body">
+          <h5 class ="card-title">Longurl:</h5>
+          <h6 class="card-title">
+            <a  href="{{details.longurl}}">{{details.longurl}}</a>
+          </h6>
+          <h5 class ="card-title">Shorturl:</h5>
+          <h6 class="card-title">
+            <a  [routerLink]="[details.shorturl]">{{details.shorturl}}</a>
+          </h6>
+          <h5 class ="card-title">VisitCount:{{details.visitcount}}</h5>
+
+        </div>
+
+      </div>
     </div>
   </div>
