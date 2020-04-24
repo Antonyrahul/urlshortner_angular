@@ -53,7 +53,7 @@ this.displayurls();
    }
     this.urlservice.getshorturl(this.userdata).subscribe((dataa)=>{
       console.log(dataa.url)
-      this.shorturl = dataa.
+      this.shorturl = dataa.url
       this.displayurls();
   })
   
