@@ -37,7 +37,7 @@ this.displayurls();
      this.prod = data.data
  })
   }
-  processdata(data)
+  async processdata(data)
   {
     this.email= localStorage.getItem('email')
     
@@ -51,7 +51,7 @@ this.displayurls();
      longurl:data
 
    }
-    this.urlservice.getshorturl(this.userdata).subscribe((dataa)=>{
+   await this.urlservice.getshorturl(this.userdata).subscribe((dataa)=>{
       console.log(dataa.url)
       this.shorturl = dataa.url
   })
