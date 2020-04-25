@@ -11,7 +11,7 @@
         <button [disabled]="!this.name" class="btn btn-primary" (click) = "processdata(longurl.value);">Get url</button>
     </div>
     <h6 *ngIf = "!this.name" class="card-title">You should login to access this service </h6>
-    <h5 class="card-title">antonyrahul.site/{{this.shorturl}}</h5>
+    <h5 class="card-title">urlshortnerappantony.herokuapp.com/{{this.shorturl}}</h5>
     </div>
 
   </div>
@@ -30,8 +30,9 @@
           <h6 class="card-title">
             <a  [routerLink]="[details.shorturl]">{{details.shorturl}}</a>
           </h6>
-          <h5 class ="card-title">VisitCount:{{details.visitcount}}</h5>
-
+          <h5 class ="card-title">VisitCount from homepage:{{details.homevisitcount}}</h5>
+          <h5 class ="card-title">VisitCount from external:{{details.externalvisitcount}}</h5>
+          <a [routerLink]="['/history',details.shorturl]" class="btn btn-success">Show history</a>
         </div>
 
       </div>

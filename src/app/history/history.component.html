@@ -1,0 +1,35 @@
+<div class="card text-center">
+    <div class="card-header">
+      History details for {{this.id}}
+    </div>
+</div>
+<div  class="row display">
+    
+    <div *ngFor="let details of prod; " class="col-lg-4 col-md-6 mb-4">
+      <div class="card h-100">
+       
+        <div class="card-body">
+          <h6 class ="card-title">Visit Time:</h6>
+          <h5 class="card-title">
+           {{details.dateandtime}}
+          </h5>
+          <h6 class ="card-title">Country</h6>
+          <h5 class="card-title">
+           {{details.location}}
+          </h5>
+          <h6 class ="card-title">Device Details</h6>
+          <h5 class="card-title">
+           {{details.devicedetails}}
+          </h5>
+          <h6 class ="card-title">IP Address</h6>
+          <h5 class="card-title">
+           {{details.customerip}}
+          </h5>
+
+          <h5 class ="card-title">VisitCount:{{details.visitcount}}</h5>
+
+        </div>
+
+      </div>
+    </div>
+  </div>

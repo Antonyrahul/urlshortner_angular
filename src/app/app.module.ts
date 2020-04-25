@@ -9,7 +9,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { RedirectComponent } from './redirect/redirect.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import {ReactiveFormsModule,FormsModule} from '@angular/forms'
+import {ReactiveFormsModule,FormsModule} from '@angular/forms';
+import { HistoryComponent } from './history/history.component'
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {ReactiveFormsModule,FormsModule} from '@angular/forms'
     HomepageComponent,
     RedirectComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    HistoryComponent
   ],
   imports: [
     BrowserModule,

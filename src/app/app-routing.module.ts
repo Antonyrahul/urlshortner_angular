@@ -4,6 +4,7 @@ import { HomepageComponent } from './homepage/homepage.component'
 import { RedirectComponent } from './redirect/redirect.component'
 import {LoginComponent} from './login/login.component'
 import {RegisterComponent} from './register/register.component'
+import { HistoryComponent } from './history/history.component'
 
 
 const routes: Routes = [
@@ -22,7 +23,10 @@ const routes: Routes = [
   {
     path:':id',
     component:RedirectComponent
-  }
+  },
+  {path:'history/:id',
+component:HistoryComponent
+}
  
 ];
 
