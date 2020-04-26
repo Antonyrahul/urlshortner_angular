@@ -39,7 +39,7 @@ export class UrlService {
   gethistory(data):Observable<any>
   {
     console.log(data)
-    return this.http.post("https://urlshortnerappantony.herokuapp.com",{shorturl:data})
+    return this.http.post("https://urlshortnerappantony.herokuapp.com/gethistory",{shorturl:data})
   }
 }
 //https://urlshortnerappantony.herokuapp.com
